@@ -1,1 +1,16 @@
-.nav {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+.nav {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+/* vh = viewport height e.g the size of the window */
+#hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
