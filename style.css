@@ -1,16 +1,64 @@
-.nav {
+body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Helper classes */
+.center {text-align: center;}
+.list-none li {list-style: none;}
+
+/* General section styling */
+section {
+    padding: 40px;
+}
+section h2 {
     text-align: center;
 }
 
+/* Navigation Bar */
+nav {
+    text-align: center;
+    background: #0c75d0;
+}
 nav li {
     display: inline-block;
+    padding: 10px 20px;
+    /* Transition controls how long it takes to go from one style to another */
+    transition: 0.3s;
+}
+nav li:hover {
+    background: #095aa1;
+}
+nav li a {
+    text-decoration: none;
+    color: #fff;
 }
 
-/* vh = viewport height e.g the size of the window */
+/* Hero section */
 #hero {
+    /* vh = viewport height e.g the size of the window */
     height: 90vh;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to left, rgb(66, 157, 73), rgb(33, 111, 137));
+    color: #fff;
+}
+#hero h1 {
+    font-size: 60px;
+}
+#hero div.image-container {
+    height: 70%;
+}
+#hero div.image-container img {
+    height: 100%;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
 }
 
+.lists{
+    display: flex;
+    justify-content: space-around;
+}
+.lists ul{
+    display: block;
+}
