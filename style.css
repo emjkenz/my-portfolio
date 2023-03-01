@@ -1,5 +1,15 @@
+/* Import the font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, p, a, li {
+    text-shadow: 1px 1px 1px #000;
 }
 
 /* Helper classes */
@@ -12,6 +22,7 @@ section {
 }
 section h2 {
     text-align: center;
+    font-size: 40px;
 }
 
 /* Navigation Bar */
@@ -21,7 +32,6 @@ nav {
 }
 nav li {
     display: inline-block;
-    padding: 10px 20px;
     /* Transition controls how long it takes to go from one style to another */
     transition: 0.3s;
 }
@@ -29,6 +39,8 @@ nav li:hover {
     background: #095aa1;
 }
 nav li a {
+    display: inline-block;
+    padding: 10px 20px;
     text-decoration: none;
     color: #fff;
 }
@@ -40,11 +52,25 @@ nav li a {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: linear-gradient(to left, rgb(66, 157, 73), rgb(33, 111, 137));
+    background: linear-gradient(to left, #5b51f5, rgb(116 33 137));
     color: #fff;
 }
 #hero h1 {
     font-size: 60px;
+}
+#hero h1 .emily {
+    color: #f33fab;
+    text-transform: uppercase;
+}
+#hero h1 .flash{
+    animation: flash 1s infinite;
+}
+#hero p {
+    font-size: 30px;
+}
+#hero p .underscore {
+    color: #f33fab;
+    letter-spacing: -6px;
 }
 #hero div.image-container {
     height: 70%;
@@ -54,11 +80,250 @@ nav li a {
     border-top-right-radius: 40px;
     border-bottom-left-radius: 40px;
 }
+#hero div.image-container img:hover {
+    animation: jiggle 1.5s infinite;
+}
+@keyframes jiggle{
+    0% {transform: rotate(0deg);}
+    5% {transform: rotate(0deg);}
+    20% {transform: rotate(5deg);}
+    80% {transform: rotate(-5deg);}
+    95% {transform: rotate(0deg);}
+    100% {transform: rotate(0deg);}
+}
+@keyframes flash {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@media screen and (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+    }
+    #hero h1 {
+        font-size: 40px;
+    }
+    #hero div.image-container {
+        height: 50%;
+    }
+}
 
-.lists{
+/* About section */
+#About-Me{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(to left, #cc37bd, #32b2cf);
+}
+#About-Me ul{
+    padding: 10px 0;
+}
+#About-Me ul li {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    #About-Me {
+        flex-direction: column;
+    }
+}
+
+/* Skills section */
+#Skills {
+    color: #fff;
+    background: linear-gradient(to left, #155393, rgb(231 11 152));
+}
+#Skills .lists{
+    padding: 20px;
     display: flex;
     justify-content: space-around;
 }
-.lists ul{
-    display: block;
+#Skills .lists li{
+    padding: 10px;
+    font-size: 20px;
+    
+}
+
+/* Qualifications section */
+#Qualifications{
+    color: #fff;
+    background: linear-gradient(to left,#31a786,#146899);
+}
+#Qualifications .articles{
+    
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+#Qualifications article{
+    width: 30%;
+    padding: 20px 0;
+}
+#Qualifications article img{
+    filter: invert();
+    padding: 10px;
+    height: 40px;
+}
+@media screen and (max-width: 768px) {
+    #Qualifications .articles {
+        flex-direction: column;
+    }
+    #Qualifications article {
+        width: 100%;
+    } 
+}
+
+/* Projects section */
+#Projects {
+    color: #fff;
+    background: linear-gradient(to left, #682195, #d432d6);
+}
+#Projects .article-container {
+    display: flex;
+    justify-content: space-around;
+}
+#Projects article:first-child{
+    width: 150%;
+}
+#Projects article{
+    color: #fff;
+    width: 100%;
+    margin: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s;
+}
+#Projects article:hover {
+    scale: 1.05;
+}
+#Projects article .darken{
+    padding: 10px;
+    padding-top: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: 0.3s;
+}
+#Projects article .darken:hover{
+    background: rgba(0, 0, 0, 0.7);
+}
+#Projects article h3{
+    text-transform: uppercase;
+}
+#Projects article p{
+    margin-bottom: 10px;
+}
+
+
+/* #Projects article .darken:hover > h3{
+    font-size: 24px;
+}
+#Projects article .darken:hover > p{
+    font-size: 20px;
+}
+#Projects article .darken:hover > a{
+    font-size: 18px;
+} */
+
+
+#Projects article a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    background: #0c75d0;
+    padding: 10px 20px;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: 0.3s;
+}
+#Projects article a:hover{
+    background: #095aa1;
+}
+/* Custom backgrounds for articles */
+#pre-work {
+    background: url(images/code.jpg);
+}
+#homework1 {
+    background: url(images/seo.jpg);
+}
+#portfolio {
+    background: url(images/motivational.jpg);
+}
+@media screen and (max-width: 768px) {
+    #Projects .article-container {
+        flex-direction: column;
+    }
+    #Projects article{
+        margin: 20px 0;
+    }
+    #Projects article:first-child{
+        width: 100%;
+    }
+    #Projects article:first-child .darken{
+        padding-top: 80px;
+    }
+}
+
+/* Contact section */
+#Contact {
+    color: #fff;
+    background: linear-gradient(to left, #5b51f5, #742189);
+}
+#Contact .contact-links {
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+#Contact .contact-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* width: 30%; */
+    color: #fff;
+    background: #0c75d0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+#Contact .contact-links a:hover {
+    background: #095aa1;
+}
+#Contact .contact-links a span{
+    padding-left: 10px;
+    padding-right: 20px;
+}
+#Contact .contact-links a span::after{
+    content: url(images/chevron-right.svg);
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    filter: invert();
+    padding-left: 40px;
+    vertical-align: sub;
+}
+#Contact .contact-links a img{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    filter: invert();
+}
+@media screen and (max-width: 768px) {
+    #Contact .contact-links {
+        flex-direction: column;
+    }
+    #Contact .contact-links a {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Footer section */
+footer {
+    background: #0c75d0;
+    color: #fff;
+    padding: 20px;
 }

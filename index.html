@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Emily's Portfolio</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,32 +23,40 @@
     </header>
 
     <section id="hero">
-        <div><h1>Emily's Portfolio</h1></div>
-        <div class="image-container"><img src="Face.jpeg" alt="Portrait"></div>
+        <div>
+            <p>Hello<span class="underscore">__</span></p>
+            <h1>I'm <span class="emily">Emily</span><span class="flash">|</span></h1>
+            <p>Developer in the making</p>
+        </div>
+        <div class="image-container">
+            <img src="images/Face.jpeg" alt="Portrait">
+        </div>
     </section>
 
-<section id="About-Me" class="center">
+<section id="About-Me">
+    <div>
         <h2>About Me</h2>
-        <p>Write a description about yourself</p>
-        <br>
-        <strong>My Intrests</strong>
+    </div>
+    <div>
         <ul>
             <li>Registered Nurse</li>
             <li>Cat mum</li>
             <li>Gamer</li>
-            <li>Sassy loose cannon</li>
+            <li>Loose cannon</li>
         </ul>
+    </div>
+        
 </section>
 
-<section id="Skills">
+<section id="Skills" class="center">
     <h2>Skills</h2>
     <div class="lists">
-        <ul>
+        <ul class="list-none">
             <li>I can give the kiss of life... literally</li>
             <li>If you ever need a catheter at least you will know who to go too</li>
             <li>No I will not give you a prostate exam</li>
         </ul>
-        <ul>
+        <ul class="list-none">
             <li>I know where to inflict pain in places you never thought of</li>
             <li>If you ever need CPR and I'm drinking... that means I'm off duty. Soz.</li>
         </ul>
@@ -57,24 +65,76 @@
 
 <section id="Qualifications">
     <h2>Qualifications</h2>
-    <ul><li>Bachelor of Nursing with Clinical Honours</li>
-        <li>Nurse Immuniser</li>
-        <li>Soon to be experienced coder</li>
-    </ul>
+    <div class="articles">
+        <article class="article-medical">
+            <!-- Alt text is blank because it is decorative -->
+            <img src="images/nurse.svg" alt="">
+            <h3>Bachelor of Nursing with Clinical Honours</h3>
+        </article>
+        <article class="article-medical">
+            <!-- Alt text is blank because it is decorative -->
+            <img src="images/syringe.svg" alt="">
+            <h3>Nurse Immuniser</h3>
+        </article>
+        <article class="article-medical">
+            <!-- Alt text is blank because it is decorative -->
+            <img src="images/code-icon.svg" alt="">
+            <h3>Soon to be experienced coder</h3>
+        </article>
+    </div>
 </section>
 
 <section id="Projects">
         <h2>Projects</h2>
-        <p>What is 0+0? The amount of brain cells and projects I have currently</p>
+        <div class="article-container">
+            <article id="pre-work">
+                <div class="darken">
+                <h3>Pre-Work Project</h3>
+                <p>I made a website for my pre-work</p>
+                <a href="https://emjkenz.github.io/prework-study-guide/" target="_blank" rel="noreferrer noopener">Read More</a>
+                </div>
+            </article>
+            <article id="homework1">
+                <div class="darken">
+                <h3>Homework Project</h3>
+                <p>Optimise a website with semantic HTML</p>
+                <a href="https://emjkenz.github.io/Homework-1-SEO-Website-Optimisation/" target="_blank" rel="noreferrer noopener">Read More</a>
+                </div>
+            </article>
+            <article id="portfolio">
+                <div class="darken">
+                <h3>My Portfolio</h3>
+                <p>This website</p>
+                <a href="https://github.com/emjkenz/my-portfolio" target="_blank" rel="noreferrer noopener">View Code</a>
+                </div>
+            </article>
+        </div>
 </section>
 
 <section id="Contact">
-        <h3>Contact</h3>
-        <p>Stalker much!</p>
-        <div> <a href="linkedin@linkedin.com">Linkedin</a></div>
-        <div> <a href="nostalkersallowed@blocked.com.au">Email</a></div>
-        <div> <a href="tel;1234696969">Ring me bich</a></div>
+        <h2>Contact</h2>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer noopener">
+                <!-- Alt text is blank because it is decorative -->
+                <img src="images/linkedin.svg" alt="">
+                <span>Linkedin</span>
+            </a>
+            <a href="mailto:nostalkersallowed@blocked.com.au">
+                <!-- Alt text is blank because it is decorative -->
+                <img src="images/envelope-solid.svg" alt="">
+                <span>Email</span>
+            </a>
+            <a href="tel:1234696969">
+                <!-- Alt text is blank because it is decorative -->
+                <img src="images/phone-solid.svg" alt="">
+                <span>Call Me</span>
+            </a>
+        </div>
+        
 </section>
+<footer class="center">
+        <p>© 2023 Emily's Portfolio</p>
+</footer>
     
 </body>
 </html>
