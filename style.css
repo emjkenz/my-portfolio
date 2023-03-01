@@ -2,25 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 html {
+    /* Makes scrlling to anchor links animated */
     scroll-behavior: smooth;
 }
 body {
+    /* Use the font from Google */
     font-family: 'Poppins', sans-serif;
 }
 
 h1, h2, h3, p, a, li {
+    /* Make the text more readable */
     text-shadow: 1px 1px 1px #000;
 }
 
-/* Helper classes */
+/*
+Helper classes:
+Reusable classes to quickly style elements
+*/
 .center {text-align: center;}
 .list-none li {list-style: none;}
 
 /* General section styling */
 section {
+    /* Space out the sections */
     padding: 40px;
 }
 section h2 {
+    /* Give all the sections a large header */
     text-align: center;
     font-size: 40px;
 }
@@ -39,13 +47,18 @@ nav li:hover {
     background: #095aa1;
 }
 nav li a {
+    /* Make the links display right next to eachother in a line */
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
     color: #fff;
 }
 
-/* Hero section */
+/* 
+Hero section:
+Show a nice large section to greet the user to the website.
+The background is a gradiant that goes right to left.
+*/
 #hero {
     /* vh = viewport height e.g the size of the window */
     height: 90vh;
@@ -59,10 +72,12 @@ nav li a {
     font-size: 60px;
 }
 #hero h1 .emily {
+    /* CHange the colour of my name to make it stand out */
     color: #f33fab;
     text-transform: uppercase;
 }
 #hero h1 .flash{
+    /* Add an animated flashing terminal cursor just like the inspiration website */
     animation: flash 1s infinite;
 }
 #hero p {
@@ -70,20 +85,25 @@ nav li a {
 }
 #hero p .underscore {
     color: #f33fab;
+    /* Make the spacing of the "_" closer together to make it look larger */
     letter-spacing: -6px;
 }
 #hero div.image-container {
+    /* Adjust the size of the image so its not so overpowering */
     height: 70%;
 }
 #hero div.image-container img {
     height: 100%;
+    /* The borders gives the image an interesting shape */
     border-top-right-radius: 40px;
     border-bottom-left-radius: 40px;
 }
 #hero div.image-container img:hover {
+    /* Add an animation to the image when you hover over it */
     animation: jiggle 1.5s infinite;
 }
 @keyframes jiggle{
+    /* The animation sequence to make the image dance back and forth */
     0% {transform: rotate(0deg);}
     5% {transform: rotate(0deg);}
     20% {transform: rotate(5deg);}
@@ -92,18 +112,21 @@ nav li a {
     100% {transform: rotate(0deg);}
 }
 @keyframes flash {
+    /* Fade the terminal cursor in and out */
     0% {opacity: 1;}
     50% {opacity: 0;}
     100% {opacity: 1;}
 }
 @media screen and (max-width: 768px) {
     #hero {
+        /* Change the direction of the flex container to run vertically on mobile */
         flex-direction: column;
     }
     #hero h1 {
         font-size: 40px;
     }
     #hero div.image-container {
+        /* Reduce the image size on mobile */
         height: 50%;
     }
 }
@@ -125,6 +148,7 @@ nav li a {
 
 @media screen and (max-width: 768px) {
     #About-Me {
+        /* Change the direction of the flex container to run vertically on mobile */
         flex-direction: column;
     }
 }
@@ -151,25 +175,28 @@ nav li a {
     background: linear-gradient(to left,#31a786,#146899);
 }
 #Qualifications .articles{
-    
     display: flex;
     text-align: center;
     justify-content: space-around;
 }
 #Qualifications article{
+    /* Split the qualiications into 3 */
     width: 30%;
     padding: 20px 0;
 }
 #Qualifications article img{
+    /* Make the black images white */
     filter: invert();
     padding: 10px;
     height: 40px;
 }
 @media screen and (max-width: 768px) {
     #Qualifications .articles {
+        /* Change the direction of the flex container to run vertically on mobile */
         flex-direction: column;
     }
     #Qualifications article {
+        /* Make the project links full width on mobile */
         width: 100%;
     } 
 }
@@ -184,31 +211,38 @@ nav li a {
     justify-content: space-around;
 }
 #Projects article:first-child{
+    /* Make the first article bigger than the others */
     width: 150%;
 }
 #Projects article{
     color: #fff;
     width: 100%;
     margin: 20px;
+    /* Added the same curvy theme from the main imgage to the articles */
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
+    /* Made the background stretch to the container */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     transition: 0.3s;
+    /* Hide the overflow of the .darken background */
+    overflow: hidden;
 }
 #Projects article:hover {
+    /* Make the article bigger when you hover over it */
     scale: 1.05;
 }
 #Projects article .darken{
     padding: 10px;
     padding-top: 40px;
+    /* Made the background darker so the text stands out */
     background: rgba(0, 0, 0, 0.5);
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
     transition: 0.3s;
+    height: 100%;
 }
 #Projects article .darken:hover{
+    /* Make the background darker when you hover over the article */
     background: rgba(0, 0, 0, 0.7);
 }
 #Projects article h3{
@@ -217,34 +251,24 @@ nav li a {
 #Projects article p{
     margin-bottom: 10px;
 }
-
-
-/* #Projects article .darken:hover > h3{
-    font-size: 24px;
-}
-#Projects article .darken:hover > p{
-    font-size: 20px;
-}
-#Projects article .darken:hover > a{
-    font-size: 18px;
-} */
-
-
 #Projects article a{
+    /* Make the links look like buttons */
     color: #fff;
     text-decoration: none;
     display: inline-block;
     background: #0c75d0;
     padding: 10px 20px;
     border: none;
+    /* Gave the buttons curvy corners */
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     transition: 0.3s;
 }
 #Projects article a:hover{
+    /* Make the button darker on hover */
     background: #095aa1;
 }
-/* Custom backgrounds for articles */
+/* Custom backgrounds for each article */
 #pre-work {
     background: url(images/code.jpg);
 }
@@ -256,6 +280,7 @@ nav li a {
 }
 @media screen and (max-width: 768px) {
     #Projects .article-container {
+        /* Change the direction of the flex container to run vertically on mobile */
         flex-direction: column;
     }
     #Projects article{
@@ -280,6 +305,7 @@ nav li a {
     justify-content: space-around;
 }
 #Contact .contact-links a {
+    /* Make the links look like buttons */
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -290,6 +316,7 @@ nav li a {
     transition: 0.3s;
 }
 #Contact .contact-links a:hover {
+    /* Darken the button on hover */
     background: #095aa1;
 }
 #Contact .contact-links a span{
@@ -297,10 +324,12 @@ nav li a {
     padding-right: 20px;
 }
 #Contact .contact-links a span::after{
+    /* Added a little arrof after the button text */
     content: url(images/chevron-right.svg);
     width: 10px;
     height: 10px;
     display: inline-block;
+    /* Make the black images white */
     filter: invert();
     padding-left: 40px;
     vertical-align: sub;
@@ -309,10 +338,12 @@ nav li a {
     width: 40px;
     height: 40px;
     padding: 10px;
+    /* Make the black images white */
     filter: invert();
 }
 @media screen and (max-width: 768px) {
     #Contact .contact-links {
+        /* Change the direction of the flex container to run vertically on mobile */
         flex-direction: column;
     }
     #Contact .contact-links a {
@@ -323,6 +354,7 @@ nav li a {
 
 /* Footer section */
 footer {
+    /* Match the style of the header */
     background: #0c75d0;
     color: #fff;
     padding: 20px;
