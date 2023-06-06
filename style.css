@@ -270,7 +270,7 @@ The background is a gradiant that goes right to left.
 }
 /* Custom backgrounds for each article */
 #choice-cuts {
-    background: url(images/choice cuts image.png);
+    background: url(images/choice%20cuts%20image.png);
 }
 #my-movie-search {
     background: url(images/mymoviesearch.gif);
