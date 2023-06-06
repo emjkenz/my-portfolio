@@ -269,6 +269,9 @@ The background is a gradiant that goes right to left.
     background: #095aa1;
 }
 /* Custom backgrounds for each article */
+#choice-cuts {
+    background: url(images/choice cuts image.png);
+}
 #my-movie-search {
     background: url(images/mymoviesearch.gif);
 }
