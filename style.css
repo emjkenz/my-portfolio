@@ -269,6 +269,9 @@ The background is a gradiant that goes right to left.
     background: #095aa1;
 }
 /* Custom backgrounds for each article */
+#tutoriffic {
+    background: url(images/tutoriffic.jpg);
+}
 #choice-cuts {
     background: url(images/choice%20cuts%20image.png);
 }
